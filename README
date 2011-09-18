@@ -1,0 +1,18 @@
+TrueCrypt password guesser/cracker
+
+Quick hack to guess truecrypt password 
+
+Use it if:
+- you have existing password list (password reuse problem)
+- you suspect password is dictionary word
+
+If you think to brute force every possible combination, you should 
+try to find some faster ones.
+
+Usage:
+
+cat wordlist | ./tc-guesser.pl -f file.tc
+
+john --incremental --stdout | ./tc-guesser.pl -f file.tc -v -q -m ro,system
+
+
